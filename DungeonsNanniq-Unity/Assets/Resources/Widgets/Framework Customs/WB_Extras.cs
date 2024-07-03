@@ -35,11 +35,8 @@ public class WB_Extras : MonoBehaviour
         buttonBack.onClick.AddListener(() => { Destroy(gameObject); });
         buttonExtra1.onClick.AddListener(() =>
         {
-            if (!worldLoader)
-            {
-                worldLoader = FindObjectOfType<WorldLoader>();
-            }
-            worldLoader.LoadWorld("_LevelEditor");
+            if (!worldLoader) worldLoader = FindObjectOfType<WorldLoader>();
+            worldLoader.LoadWorld("World");
         });
     }
 
